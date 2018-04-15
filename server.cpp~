@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
         cout<<"Received packet from"<< inet_ntoa(si_other.sin_addr)<<":"<<ntohs(si_other.sin_port)<<"\n";
         cout<<"Data:"<< buf<< "\n";
 	//if(buf[0]=='S' && buf[1]=='T' && buf[2]=='O' && buf[3]=='P'){
-	if(strcmp (buf,"STOP")==0){
+	if(strcmp (buf,"STOP")){
 		close(s);
 		return 0;
 	}
